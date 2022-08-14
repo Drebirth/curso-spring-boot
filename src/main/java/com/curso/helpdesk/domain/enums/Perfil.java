@@ -1,4 +1,4 @@
-package com.curso.helpdesk.domain;
+package com.curso.helpdesk.domain.enums;
 
 
 public enum Perfil {

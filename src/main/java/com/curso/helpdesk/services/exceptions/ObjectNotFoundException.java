@@ -1,4 +1,4 @@
-package com.curso.helpdesk.exceptions;
+package com.curso.helpdesk.services.exceptions;
 
 public class ObjectNotFoundException extends RuntimeException{
     public ObjectNotFoundException(String message) {

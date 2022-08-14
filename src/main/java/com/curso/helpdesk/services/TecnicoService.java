@@ -1,6 +1,7 @@
 package com.curso.helpdesk.services;
 
 import com.curso.helpdesk.domain.Tecnico;
+import com.curso.helpdesk.domain.dtos.TecnicoDTO;
 import com.curso.helpdesk.exceptions.ObjectNotFoundException;
 import com.curso.helpdesk.repository.TecnicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,9 @@ public class TecnicoService {
     }
 
 
-
+    public Tecnico create(TecnicoDTO objDTO) {
+        objDTO.setId(null);
+        Tecnico newObj = new Tecnico(objDTO);
+        return repository.save(newObj);
+    }
 }

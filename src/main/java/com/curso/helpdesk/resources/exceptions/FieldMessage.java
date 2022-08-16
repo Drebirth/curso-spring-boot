@@ -2,7 +2,7 @@ package com.curso.helpdesk.resources.exceptions;
 
 import java.io.Serializable;
 
-public class FieldMessage implements Serializable {
+public class FieldMessage {
 
     private String fieldName;
     private String message;

@@ -2,6 +2,7 @@ package com.curso.helpdesk.domain;
 
 import com.curso.helpdesk.domain.enums.Perfil;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,11 +13,12 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Entity
-public abstract class Pessoa implements Serializable {
+public abstract class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
     protected String nome;
+    //@CPF
     @Column(unique = true)
     protected String cpf;
     @Column(unique = true)

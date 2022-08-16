@@ -2,7 +2,7 @@ package com.curso.helpdesk.resources.exceptions;
 
 import java.io.Serializable;
 
-public class StandarError implements Serializable {
+public class StandarError{
 
     private Long timestamp;
     private Integer status;

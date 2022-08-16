@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class TecnicoDTO implements Serializable {
+public class TecnicoDTO {
 
     protected Integer id;
     @NotNull(message = "O campo NOME é requerido")

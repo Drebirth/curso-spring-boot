@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 @Entity
-public class Chamado implements Serializable {
+public class Chamado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

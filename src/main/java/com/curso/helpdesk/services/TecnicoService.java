@@ -47,10 +47,6 @@ public class TecnicoService {
         }
 
         obj = pessoaRepository.findByEmail(objDTO.getEmail());
-        /*
-        if (obj.isPresent() && obj.get().getId() != objDTO.getId()){
-        tambem funciona pro email?
-         */
         if (obj.isPresent() && obj.get().getEmail() != objDTO.getEmail()){
             throw new DataIntegrityViolationException("Email já cadastrado no sistema!");
         }

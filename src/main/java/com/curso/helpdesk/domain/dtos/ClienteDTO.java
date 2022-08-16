@@ -1,24 +1,22 @@
 package com.curso.helpdesk.domain.dtos;
 
+import com.curso.helpdesk.domain.Cliente;
 import com.curso.helpdesk.domain.Tecnico;
 import com.curso.helpdesk.domain.enums.Perfil;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class TecnicoDTO {
+public class ClienteDTO {
 
     protected Integer id;
     @NotNull(message = "O campo NOME é requerido")
     protected String nome;
     @NotNull(message = "O campo CPF é requerido")
-    //@CPF
     protected String cpf;
     @NotNull(message = "O campo EMAIL é requerido")
     protected String email;
@@ -29,11 +27,11 @@ public class TecnicoDTO {
     @JsonFormat(pattern = "dd/MM/yyyy")
     protected LocalDate dataCriacao = LocalDate.now();
 
-    public TecnicoDTO() {
+    public ClienteDTO() {
         addPerfis(Perfil.CLIENTE);
     }
 
-    public TecnicoDTO(Tecnico obj) {
+    public ClienteDTO(Cliente obj) {
         this.id = obj.getId();
         this.nome = obj.getNome();
         this.cpf = obj.getCpf();

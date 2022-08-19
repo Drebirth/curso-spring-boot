@@ -34,7 +34,7 @@ public class UserSS implements UserDetails {
 
     @Override
     public String getPassword() {
-        return null;
+        return senha;
     }
 
     @Override

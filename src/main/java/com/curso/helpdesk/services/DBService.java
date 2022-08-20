@@ -34,9 +34,10 @@ public class DBService {
         Tecnico tec1 = new Tecnico(null,"Daniel","701.123.043-12","daniel@hotmail.com", encoder.encode("123"));
         tec1.addPerfil(Perfil.ADMIN);
 
+
         Cliente cli1 = new Cliente(null,"Linus Torvalds", "701.164.046-05","torvalds@email.com", encoder.encode("231"));
 
-        Chamado c1 = new Chamado(null, Prioridade.MEDIA, Status.ANDAMENTO,"chmado 01","Primeiro chamado", tec1, cli1);
+       Chamado c1 = new Chamado(null, Prioridade.MEDIA, Status.ANDAMENTO,"chmado 01","Primeiro chamado", tec1, cli1);
 
         tecnicoRepository.saveAll(Arrays.asList(tec1));
         clienteRepository.saveAll(Arrays.asList(cli1));
